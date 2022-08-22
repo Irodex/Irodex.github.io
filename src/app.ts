@@ -26,7 +26,7 @@ export default class HelloWorld {
 		// set up somewhere to store loaded assets (meshes, textures, animations, gltfs, etc.)
 		
 		this.assets = new MRE.AssetContainer(this.context);
-		let result = await this.assets;
+		
 
 		// Create a new actor with no mesh, but some text.
 		this.text = MRE.Actor.Create(this.context, {

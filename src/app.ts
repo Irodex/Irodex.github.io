@@ -24,7 +24,9 @@ export default class HelloWorld {
 	 */
 	private async started() {
 		// set up somewhere to store loaded assets (meshes, textures, animations, gltfs, etc.)
+		
 		this.assets = new MRE.AssetContainer(this.context);
+		let result = await this.assets;
 
 		// Create a new actor with no mesh, but some text.
 		this.text = MRE.Actor.Create(this.context, {
@@ -79,6 +81,7 @@ export default class HelloWorld {
                 appearance: {
                     enabled: false
                 }
+				
             }
         });
 		//this.button.setBehavior(MRE.ButtonBehavior).onClick(this.text.appearance.enabled(value:true));
@@ -88,6 +91,7 @@ export default class HelloWorld {
 		
 		
 	}
+
 
 	private ToggleShirt()
 	{
